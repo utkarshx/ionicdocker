@@ -11,6 +11,7 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 RUN npm install -g cordova ionic
 
+sudo apt-get install python-software-properties
 RUN add-apt-repository ppa:webupd8team/java -y
 RUN apt-get update
 RUN echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections
