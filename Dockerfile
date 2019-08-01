@@ -5,13 +5,12 @@ ENV PATH="/var/opt/gradle/2.14/bin:/var/opt/android/tools:/var/opt/android/tools
 
 RUN apt-get update
 
-RUN apt-get install -y curl git software-properties-common unzip
+RUN apt-get install -y curl git software-properties-common unzip python-software-properties
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 RUN npm install -g cordova ionic
 
-RUN apt-get install python-software-properties
 RUN add-apt-repository ppa:webupd8team/java -y
 RUN apt-get update
 RUN echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections
